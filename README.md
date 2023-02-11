@@ -16,10 +16,9 @@ This program is a Java application that simulates the solar system in 2D, using 
 
 - Run the program using Gradle: gradle run
 - Use the controls to manipulate the simulation:
-	- Use the mouse to drag the view
-	- Scroll the mouse wheel to zoom in and out
-	- Use the arrow keys to move forward and backward in time
+	- [ ] Use the mouse to drag the view
+	- [ ] Scroll the mouse wheel to zoom in and out
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the License - see the [LICENSE](https://github.com/michael2to3/solar-system/blob/main/README.md) file for details.
