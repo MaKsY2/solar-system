@@ -20,5 +20,4 @@ This program is a Java application that simulates the solar system in 2D, using 
 	- [ ] Scroll the mouse wheel to zoom in and out
 
 ## License
-
-This project is licensed under the License - see the [LICENSE](https://github.com/michael2to3/solar-system/blob/main/README.md) file for details.
+This project is licensed under the License - see the [LICENSE](https://github.com/michael2to3/solar-system/blob/main/LICENSE) file for details.
