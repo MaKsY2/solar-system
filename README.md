@@ -1,6 +1,6 @@
 # Solar System 2D Simulation
 
-This program is a Java application that simulates the solar system in 2D, using JavaFX and a multi-thread system to improve performance.
+This program is a Java application that simulates the solar system in 2D, using JavaFX.
 
 
 
@@ -23,8 +23,6 @@ https://user-images.githubusercontent.com/87614587/218321384-df020123-75be-4dd1-
 
 - Run the program using Gradle: gradle run
 - Use the controls to manipulate the simulation:
-	- [ ] Use the mouse to drag the view
-	- [ ] Scroll the mouse wheel to zoom in and out
 
 ## License
 This project is licensed under the License - see the [LICENSE](https://github.com/michael2to3/solar-system/blob/main/LICENSE) file for details.

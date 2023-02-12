@@ -42,19 +42,13 @@ class SolarSystem {
             for (AstroGraphics point : points) {
                 point.draw(gc);
             }
-            Function<AstroGraphics, AstroObject> func = new Function<AstroGraphics, AstroObject>() {
-                public AstroObject apply(AstroGraphics value) {
-                    return value.getObject();
-                }
-            };
-            var opoints = points.stream().map(func).collect(Collectors.toList());
-            for (AstroObject point : opoints) {
-                for (AstroObject otherPoint : opoints) {
+            for (AstroGraphics point : points) {
+                for (AstroGraphics otherPoint : points) {
                     if (point != otherPoint) {
-                        point.updateVelocity(otherPoint, 1);
+                        point.getObject().updateVelocity(otherPoint.getObject(), 1);
                     }
                 }
-                point.updatePosition(1);
+                point.getObject().updatePosition(1);
             }
         }));
 
