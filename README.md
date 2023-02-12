@@ -1,6 +1,13 @@
 # Solar System 2D Simulation
 
 This program is a Java application that simulates the solar system in 2D, using JavaFX and a multi-thread system to improve performance.
+
+
+
+https://user-images.githubusercontent.com/87614587/218321384-df020123-75be-4dd1-9f26-683bbe19b97f.mp4
+
+
+
 ## Prerequisites
 
 - Java 8 or higher
