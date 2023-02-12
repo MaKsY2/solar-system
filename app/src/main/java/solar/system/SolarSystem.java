@@ -10,28 +10,35 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import solar.system.Objects.AstroGraphics;
 import solar.system.Objects.AstroObject;
+import solar.system.Planet.Earth;
+import solar.system.Planet.Mars;
+import solar.system.Planet.Sun;
 
 class SolarSystem {
     private final Canvas canvas;
     private final GraphicsContext gc;
     private List<AstroGraphics> points;
+    private final double G = 6.67430e-11;
 
     SolarSystem(Canvas canvas) {
         this.canvas = canvas;
         this.gc = canvas.getGraphicsContext2D();
-        var object = new AstroObject(0, 0, 100, 10, 1, 1);
-        var object2 = new AstroObject(10, 100, 100, 10, 1, 1);
-        this.points = new ArrayList<AstroGraphics>();
-        this.points.add(new AstroGraphics(object));
-        this.points.add(new AstroGraphics(object2));
+        var xcenter = canvas.getWidth() / 2;
+        var ycenter = canvas.getHeight() / 2;
+        this.points = new ArrayList<>();
+        this.points.add(new Sun(xcenter, ycenter, 0d, 0d, G));
+        this.points.add(new Earth(xcenter + 100, ycenter, 0d, 14d, G));
+        this.points.add(new Mars(xcenter + 200, ycenter, 0d, 8d, G));
     }
 
     public void run() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(16), event -> {
-            gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+            gc.setFill(Color.BLACK);
+            gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
             for (AstroGraphics point : points) {
                 point.draw(gc);
             }
@@ -44,7 +51,7 @@ class SolarSystem {
             for (AstroObject point : opoints) {
                 for (AstroObject otherPoint : opoints) {
                     if (point != otherPoint) {
-                        point.updateVelocity(otherPoint, 9.9, 1);
+                        point.updateVelocity(otherPoint, 1);
                     }
                 }
                 point.updatePosition(1);
