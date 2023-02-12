@@ -22,7 +22,6 @@ https://user-images.githubusercontent.com/87614587/218321384-df020123-75be-4dd1-
 ## Usage
 
 - Run the program using Gradle: gradle run
-- Use the controls to manipulate the simulation:
 
 ## License
 This project is licensed under the License - see the [LICENSE](https://github.com/michael2to3/solar-system/blob/main/LICENSE) file for details.
